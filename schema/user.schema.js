@@ -11,9 +11,7 @@ export const SignupBodySchema = Joi.object({
   password: Joi.string()
     .required()
     .pattern(
-      new RegExp(
-        "^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})",
-      ),
+      /^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})/,
     ),
   role: Joi.string().valid([
     "SITE_MANAGER",
