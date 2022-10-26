@@ -10,8 +10,8 @@ export const save = async (data) => {
       throw new AppError("User already exists.", 400);
     } else {
       const salt = await bcrypt.genSalt();
-      const hash = await bcrypt.hash(password, salt);
-      password = hash;
+      const hash = await bcrypt.hash(data.password, salt);
+      data.password = hash; // eslint-disable-line no-param-reassign
     }
     await saveUser(data);
     return Promise.resolve("Successfully registered.");
