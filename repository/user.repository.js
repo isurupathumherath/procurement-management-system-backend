@@ -10,8 +10,8 @@ export const saveUser = (data) =>
       throw new AppError("Internal server error.", 500);
     });
 
-export const loginUser = (userName) =>
-  User.findOne({ userName })
+export const loginUser = (email) =>
+  User.findOne({ email })
     .then((user) => {
       return Promise.resolve(user);
     })
@@ -21,6 +21,7 @@ export const loginUser = (userName) =>
 
 export const getUser = (data) =>
   User.findOne(data)
+    .select("-password")
     .then((user) => {
       return Promise.resolve(user);
     })

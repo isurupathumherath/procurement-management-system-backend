@@ -1,3 +1,1 @@
-import { save, login } from "./user.service.js";
-
-export { save, login };
+export * from "./user.service.js";

@@ -4,10 +4,8 @@ import { saveUser, loginUser, getUser } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
 export const save = async (data) => {
-  let { firstName, lastName, email, userName, password, role } = data;
-  const userNameObj = { userName };
   try {
-    const exUser = await getUser(userNameObj);
+    const exUser = await getUser(data?.email);
     if (exUser) {
       throw new AppError("User already exists.", 400);
     } else {
@@ -15,7 +13,7 @@ export const save = async (data) => {
       const hash = await bcrypt.hash(password, salt);
       password = hash;
     }
-    await saveUser({ firstName, lastName, email, userName, password, role });
+    await saveUser(data);
     return Promise.resolve("Successfully registered.");
   } catch (err) {
     throw new AppError(err.message, err.status);

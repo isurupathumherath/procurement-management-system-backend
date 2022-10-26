@@ -18,3 +18,11 @@ export const loginUser = async (req, res) => {
     res.status(err.status).json(err.message);
   }
 };
+
+export const viewProfile = async (req, res) => {
+  try {
+    res.json(Success(req.user, "View profile success."));
+  } catch (err) {
+    res.status(err.status).json(err.message);
+  }
+};
