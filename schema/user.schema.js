@@ -7,21 +7,16 @@ export const SignupBodySchema = Joi.object({
   mobile: Joi.string().min(10).required(),
   department: Joi.string()
     .required()
-    .valid(["PROCUREMENT", "MANAGEMENT", "ONSITE"]),
+    .valid("PROCUREMENT", "MANAGEMENT", "ONSITE"),
   password: Joi.string()
     .required()
     .pattern(
       /^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})/,
     ),
-  role: Joi.string().valid([
-    "SITE_MANAGER",
-    "PROCUREMENT",
-    "SENIOR",
-    "SUPPLIER",
-  ]),
-  site: Joi.string().when("role", {
+  role: Joi.string().valid("SITE_MANAGER", "PROCUREMENT", "SENIOR", "SUPPLIER"),
+  site: Joi.when("role", {
     is: "ONSITE",
-    then: Joi.required().length(24).hex(),
+    then: Joi.string().required().length(24).hex(),
     otherwise: Joi.forbidden(),
   }),
 });
