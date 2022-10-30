@@ -14,9 +14,9 @@ export const SignupBodySchema = Joi.object({
       /^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})/,
     ),
   role: Joi.string().valid("SITE_MANAGER", "PROCUREMENT", "SENIOR", "SUPPLIER"),
-  site: Joi.when("role", {
-    is: "ONSITE",
-    then: Joi.string().required().length(24).hex(),
+  siteName: Joi.when("role", {
+    is: "SITE_MANAGER",
+    then: Joi.string().required(),
     otherwise: Joi.forbidden(),
   }),
 });

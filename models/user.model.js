@@ -10,10 +10,7 @@ const UserSchema = new Schema({
   department: String,
   password: String,
   role: String,
-  site: {
-    type: Schema.Types.ObjectId,
-    ref: "Site",
-  },
+  siteName: String,
 });
 
 export const User = mongoose.model("User", UserSchema);
