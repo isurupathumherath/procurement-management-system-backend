@@ -21,9 +21,9 @@ export const save = async (data) => {
 };
 
 export const login = async (data) => {
-  const { userName, password } = data;
+  const { email, password } = data;
   try {
-    const user = await loginUser(userName);
+    const user = await loginUser(email);
     if (!user) {
       throw new AppError("User does not exist.", 404);
     } else {
