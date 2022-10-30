@@ -1,3 +1,3 @@
-export * from "./user.schema";
-export * from "./supplier.schema";
-export * from "./order.schema";
+export * from "./user.schema.js";
+export * from "./supplier.schema.js";
+export * from "./order.schema.js";

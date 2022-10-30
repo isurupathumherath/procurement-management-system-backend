@@ -1,3 +1,3 @@
 export * from "./user.service.js";
-export * from "./supplier.service";
-export * from "./order.service";
+export * from "./supplier.service.js";
+export * from "./order.service.js";

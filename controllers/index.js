@@ -1,3 +1,3 @@
 export * from "./user.controller.js";
-export * from "./supplier.controller";
-export * from "./order.controller";
+export * from "./supplier.controller.js";
+export * from "./order.controller.js";
