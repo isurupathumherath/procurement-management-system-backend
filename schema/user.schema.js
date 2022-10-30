@@ -25,7 +25,3 @@ export const LoginBodySchema = Joi.object({
   email: Joi.string().email().required(),
   password: Joi.string().required(),
 });
-
-export const MeHeader = Joi.object({
-  token: Joi.string().required(),
-});
