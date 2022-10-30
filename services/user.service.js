@@ -5,7 +5,7 @@ import AppError from "../utils/appError.js";
 
 export const save = async (data) => {
   try {
-    const exUser = await getUser(data?.email);
+    const exUser = await getUser({ email: data?.email });
     if (exUser) {
       throw new AppError("User already exists.", 400);
     } else {
