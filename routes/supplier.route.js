@@ -4,15 +4,15 @@ import {
   CreateSupplierBodySchema,
   SupplierIdSchema,
   UpdateSupplierBodySchema,
-} from "../schema";
+} from "../schema/index.js";
 import {
   createSupplier,
   getSupplier,
   getSuppliers,
   updateSupplier,
   deleteSupplier,
-} from "../controllers";
-import { authenticate } from "../middleware/auth.middleware";
+} from "../controllers/index.js";
+import { authenticate } from "../middleware/auth.middleware.js";
 
 const supplierRouter = Router();
 

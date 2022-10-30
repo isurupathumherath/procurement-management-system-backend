@@ -1,5 +1,5 @@
-import { Order } from "../models";
-import AppError from "../utils/appError";
+import { Order } from "../models/index.js";
+import AppError from "../utils/appError.js";
 
 export const createOrder = (data) =>
   Order.create(data)

@@ -4,8 +4,8 @@ import {
   getOrders,
   updateOrder,
   deleteOrder,
-} from "../repository";
-import AppError from "../utils/appError";
+} from "../repository/index.js";
+import AppError from "../utils/appError.js";
 
 export const createOrderSrv = async (data, user) => {
   try {

@@ -1,5 +1,5 @@
-import { Supplier } from "../models";
-import AppError from "../utils/appError";
+import { Supplier } from "../models/index.js";
+import AppError from "../utils/appError.js";
 
 export const createSupplier = (data) =>
   Supplier.create(data)

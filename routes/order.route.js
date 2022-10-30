@@ -4,15 +4,15 @@ import {
   CreateOrderBodySchema,
   OrderIdSchema,
   UpdateOrderBodySchema,
-} from "../schema";
+} from "../schema/index.js";
 import {
   createOrder,
   getOrder,
   getOrders,
   updateOrder,
   deleteOrder,
-} from "../controllers";
-import { authenticate } from "../middleware/auth.middleware";
+} from "../controllers/index.js";
+import { authenticate } from "../middleware/auth.middleware.js";
 
 const orderRouter = Router();
 

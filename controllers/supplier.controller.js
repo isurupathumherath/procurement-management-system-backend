@@ -1,5 +1,5 @@
-import { create, getOne, getAll, update, remove } from "../services";
-import Success from "../utils/success";
+import { create, getOne, getAll, update, remove } from "../services/index.js";
+import Success from "../utils/success.js";
 
 export const createSupplier = async (req, res) => {
   try {

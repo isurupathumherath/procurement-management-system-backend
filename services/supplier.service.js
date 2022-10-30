@@ -4,8 +4,8 @@ import {
   getAllSupplier,
   updateSupplier,
   deleteSupplier,
-} from "../repository";
-import AppError from "../utils/appError";
+} from "../repository/index.js";
+import AppError from "../utils/appError.js";
 
 export const create = async (data) => {
   try {
