@@ -12,7 +12,7 @@ const userRouter = express.Router();
 
 userRouter.post("/", celebrate({ body: SignupBodySchema }), saveUser);
 userRouter.post("/login", celebrate({ body: LoginBodySchema }), loginUser);
-userRouter.post(
+userRouter.get(
   "/me",
   celebrate({ headers: MeHeader }),
   authenticate,
