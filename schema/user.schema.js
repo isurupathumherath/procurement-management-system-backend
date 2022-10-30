@@ -7,7 +7,7 @@ export const SignupBodySchema = Joi.object({
   mobile: Joi.string().min(10).required(),
   department: Joi.string()
     .required()
-    .valid("PROCUREMENT", "MANAGEMENT", "ONSITE"),
+    .valid("PROCUREMENT", "MANAGEMENT", "ONSITE", "OTHER"),
   password: Joi.string()
     .required()
     .pattern(
