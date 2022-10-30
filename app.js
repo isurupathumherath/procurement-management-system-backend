@@ -14,7 +14,7 @@ connect();
 app.use("/api", apiRouter);
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("All systems up and running!");
 });
 
 export default app;

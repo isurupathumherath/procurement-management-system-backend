@@ -4,7 +4,6 @@ const { Schema } = mongoose;
 
 const OrderSchema = new Schema({
   orderType: String,
-  quantity: Number,
   description: String,
   items: [
     {
