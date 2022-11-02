@@ -5,6 +5,7 @@ const { Schema } = mongoose;
 const ProductSchema = new Schema({
   itemName: String,
   itemBrand: String,
+  image: String,
   availableQty: Number,
   description: String,
   measuringUnit: String,

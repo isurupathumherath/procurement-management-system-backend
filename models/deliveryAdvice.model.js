@@ -9,6 +9,7 @@ const DeliveryAdviceSchema = new Schema({
   quantity: String,
   description: String,
   supplierID: String,
+  managerID: String,
 });
 
 export const DeliveryAdvice = mongoose.model(
