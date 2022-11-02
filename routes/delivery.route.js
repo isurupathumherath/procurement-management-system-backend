@@ -15,7 +15,7 @@ const orderNewRouter = express.Router();
 orderNewRouter.post("/", authenticate, saveOrderNewController);
 orderNewRouter.put("/:id", updateNewOrderController);
 orderNewRouter.delete("/:id", deleteNewOrderController);
-orderNewRouter.get("/:id", getSingleOrderController);
+orderNewRouter.get("single/:id", getSingleOrderController);
 orderNewRouter.get("/", getOrdersNewController);
 orderNewRouter.get("/manager", authenticate, getOrdersNewManagerController);
 orderNewRouter.get("/supplier", authenticate, getOrdersNewSupplierController);
