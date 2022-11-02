@@ -11,6 +11,7 @@ const UserSchema = new Schema({
   password: String,
   role: String,
   siteName: String,
+  supplier: String,
 });
 
 export const User = mongoose.model("User", UserSchema);
