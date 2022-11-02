@@ -5,6 +5,7 @@ import {
   getNewOrdersService,
   getNewOrderForManagerService,
   getNewOrderForSupplierService,
+  getSingleOrderService,
 } from "../services/index.js";
 import Success from "../utils/success.js";
 
@@ -60,6 +61,15 @@ export const getOrdersNewSupplierController = async (req, res) => {
     const supplierID = req.user.supplier;
     const orders = await getNewOrderForSupplierService(supplierID);
     res.json(Success(orders, "Successfully orders fetched."));
+  } catch (err) {
+    res.status(err.status).json(err.message);
+  }
+};
+
+export const getSingleOrderController = async (req, res) => {
+  try {
+    const order = await getSingleOrderService(req.params.id);
+    res.json(Success(order, "Successfully orders fetched."));
   } catch (err) {
     res.status(err.status).json(err.message);
   }

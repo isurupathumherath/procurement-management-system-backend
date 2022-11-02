@@ -5,6 +5,7 @@ import {
   getNewOrders,
   updateOrderNew,
   deleteOrderNew,
+  getNewOrder,
 } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
@@ -75,6 +76,15 @@ export const getNewOrderForSupplierService = async (id) => {
   try {
     const orders = await getNewOrdersForSupplier(id);
     return Promise.resolve(orders);
+  } catch (err) {
+    throw new AppError(err.message, err.status);
+  }
+};
+
+export const getSingleOrderService = async (id) => {
+  try {
+    const order = await getNewOrder(id);
+    return Promise.resolve(order);
   } catch (err) {
     throw new AppError(err.message, err.status);
   }

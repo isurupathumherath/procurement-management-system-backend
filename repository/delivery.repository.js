@@ -37,6 +37,15 @@ export const getNewOrders = () =>
       throw new AppError("Internal server error.", 500);
     });
 
+export const getNewOrder = (id) =>
+  OrderNew.findById(id)
+    .then((order) => {
+      return Promise.resolve(order);
+    })
+    .catch(() => {
+      throw new AppError("Internal server error.", 500);
+    });
+
 export const updateOrderNew = (orderId, data) =>
   OrderNew.findByIdAndUpdate(orderId, data, { new: true })
     .then((order) => {

@@ -8,7 +8,7 @@ import {
 } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
-export const saveProductService = async (data) => {
+export const saveDeliveryAdviceService = async (data) => {
   const {
     orderID,
     deliveryItems,
