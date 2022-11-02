@@ -28,3 +28,30 @@ export const getUser = (data) =>
     .catch(() => {
       throw new AppError("Internal server error.", 500);
     });
+
+export const getUsers = () =>
+  User.find()
+    .then((users) => {
+      return Promise.resolve(users);
+    })
+    .catch(() => {
+      throw new AppError("Internal server error.", 500);
+    });
+
+export const updateUser = (userId, data) =>
+  User.findByIdAndUpdate(userId, data, { new: true })
+    .then((user) => {
+      return Promise.resolve(user);
+    })
+    .catch(() => {
+      throw new AppError("Internal server error.", 500);
+    });
+
+export const deleteUser = (userId) =>
+  User.findByIdAndDelete(userId)
+    .then((user) => {
+      return Promise.resolve(user);
+    })
+    .catch(() => {
+      throw new AppError("Internal server error.", 500);
+    });
