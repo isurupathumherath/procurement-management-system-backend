@@ -57,8 +57,8 @@ export const getOrdersNewManagerController = async (req, res) => {
 
 export const getOrdersNewSupplierController = async (req, res) => {
   try {
-    const managerID = req.user.supplier;
-    const orders = await getNewOrderForSupplierService(managerID);
+    const supplierID = req.user.supplier;
+    const orders = await getNewOrderForSupplierService(supplierID);
     res.json(Success(orders, "Successfully orders fetched."));
   } catch (err) {
     res.status(err.status).json(err.message);
