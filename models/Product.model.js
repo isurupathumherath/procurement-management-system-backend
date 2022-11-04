@@ -4,12 +4,17 @@ const { Schema } = mongoose;
 
 const ProductSchema = new Schema({
   itemName: String,
+  title: String,
   itemBrand: String,
   image: String,
   availableQty: Number,
   description: String,
   measuringUnit: String,
-  price: String,
+  price: Number,
+  inStock: {
+    type: Boolean,
+    default: false,
+  },
   supplierID: String,
 });
 

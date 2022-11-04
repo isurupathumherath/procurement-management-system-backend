@@ -10,22 +10,26 @@ import AppError from "../utils/appError.js";
 export const saveProductService = async (data, supplierID) => {
   const {
     itemName,
+    title,
     itemBrand,
     image,
     availableQty,
     description,
     measuringUnit,
     price,
+    inStock,
   } = data;
   try {
     const product = await createProduct({
       itemName,
+      title,
       itemBrand,
       image,
       availableQty,
       description,
       measuringUnit,
       price,
+      inStock,
       supplierID,
     });
     return Promise.resolve(product);
