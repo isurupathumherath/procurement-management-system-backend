@@ -16,11 +16,11 @@ const PaymentSchema = new Schema(
       type: String,
       required: true,
     },
-    billId: {
+    paymentStatus: {
       type: String,
       required: true,
     },
-    paymentStatus: {
+    managerID: {
       type: String,
       required: true,
     },
