@@ -5,3 +5,5 @@ export * from "./delivery.model.js";
 export * from "./deliveryAdvice.model.js";
 export * from "./Product.model.js";
 export * from "./terms.model.js";
+export * from "./payment.model.js";
+export * from "./bill.model.js";
