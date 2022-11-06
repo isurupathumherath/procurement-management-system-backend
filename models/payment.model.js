@@ -6,23 +6,23 @@ const PaymentSchema = new Schema(
   {
     paymentName: {
       type: String,
-      required: true,
+      required: false,
     },
     paymentType: {
       type: String,
-      required: true,
+      required: false,
     },
     paymentAmount: {
       type: String,
-      required: true,
+      required: false,
     },
     paymentStatus: {
       type: String,
-      required: true,
+      required: false,
     },
     managerID: {
       type: String,
-      required: true,
+      required: false,
     },
   },
   { timestamps: true, versionKey: false },

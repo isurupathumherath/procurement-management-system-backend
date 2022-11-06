@@ -8,9 +8,8 @@ import {
 } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
-export const savePaymentService = async (data) => {
-  const { paymentName, paymentType, paymentAmount, paymentStatus, managerID } =
-    data;
+export const savePaymentService = async (data, managerID) => {
+  const { paymentName, paymentType, paymentAmount, paymentStatus } = data;
   try {
     const payment = await savePayment({
       paymentName,

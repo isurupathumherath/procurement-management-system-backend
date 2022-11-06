@@ -14,8 +14,8 @@ const paymentRouter = express.Router();
 paymentRouter.post("/", authenticate, savePaymentController);
 paymentRouter.put("/:id", updatePaymentController);
 paymentRouter.delete("/:id", deletePaymentController);
-paymentRouter.get("/", getPaymentController);
-paymentRouter.get("/:id", getPaymentByIdController);
 paymentRouter.get("/manager", authenticate, getPaymentByManagerIdController);
+paymentRouter.get("/:id", getPaymentByIdController);
+paymentRouter.get("/", getPaymentController);
 
 export default paymentRouter;
