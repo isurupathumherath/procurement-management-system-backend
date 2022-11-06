@@ -31,8 +31,8 @@ export const getPaymentById = (id) =>
       throw new AppError(`Internal Server Error: ${err}`, 500);
     });
 
-export const getPaymentByBillId = (id) =>
-  Payment.find({ billId: id })
+export const getPaymentByManagerId = (managerID) =>
+  Payment.find(managerID)
     .then((payment) => {
       if (!payment) {
         throw new AppError("Payment Details not Found", 404);
