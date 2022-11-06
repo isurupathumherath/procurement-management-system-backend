@@ -16,6 +16,8 @@ export const saveDeliveryAdviceService = async (data) => {
     quantity,
     description,
     supplierID,
+    unitPrice,
+    total,
     managerID,
   } = data;
   try {
@@ -26,6 +28,8 @@ export const saveDeliveryAdviceService = async (data) => {
       quantity,
       description,
       supplierID,
+      unitPrice,
+      total,
       managerID,
     });
     return Promise.resolve(deliveryAdvice);

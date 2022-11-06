@@ -9,6 +9,8 @@ const DeliveryAdviceSchema = new Schema({
   quantity: String,
   description: String,
   supplierID: String,
+  unitPrice: Number,
+  total: Number,
   managerID: String,
 });
 
