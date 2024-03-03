@@ -1200,10 +1200,10 @@ caniuse-lite@^1.0.30001317:
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001324.tgz"
   integrity sha512-/eYp1J6zYh1alySQB4uzYFkLmxxI8tk0kxldbNHXp8+v+rdMKdUBNjRLz7T7fz6Iox+1lIdYpc7rq6ZcXfTukg==
 
-celebrate@^15.0.1:
-  version "15.0.1"
-  resolved "https://registry.yarnpkg.com/celebrate/-/celebrate-15.0.1.tgz#767fa6268f7446b473ea69cd6326ce4dffee4d1e"
-  integrity sha512-K2y221k10u+K2t9w25802qXh8h1mVWZf+6pl7zHdlhhwzrOSQFnnw+GsR8k17oyn4Y3fVErBGsO/+CeW8N7aRQ==
+celebrate@^15.0.3:
+  version "15.0.3"
+  resolved "https://registry.yarnpkg.com/celebrate/-/celebrate-15.0.3.tgz#3eff7fb5bacc06dd28f543f5e2b5dc6ed2306cf8"
+  integrity sha512-ToF8ILq/F0KhQ0CPtexP7Cu9GkqKJ91VKy3ZOCV24aaNWdm3QCHqnXAKfKHrtcM2B2zmPFe11p8WWsQkmq8k4g==
   dependencies:
     escape-html "1.0.3"
     joi "17.x.x"
